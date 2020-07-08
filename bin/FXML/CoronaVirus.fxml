@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="769.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Corona">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/corona%20virus%201.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablo" layoutX="276.0" layoutY="135.0" prefHeight="358.0" prefWidth="468.0" style="-fx-background-color: #00968F;">
+        <columns>
+          <TableColumn fx:id="hastaadikolon" style="-fx-background-color: #4DB6AC;" text="HASTA ADI" />
+          <TableColumn fx:id="sehirkolon" prefWidth="75.0" style="-fx-background-color: #80CBC4;" text="ŞEHİR" />
+            <TableColumn fx:id="meslekkolon" prefWidth="81.0" style="-fx-background-color: #4DB6AC;" text="MESLEK" />
+            <TableColumn fx:id="cinsiyetkolon" prefWidth="73.0" style="-fx-background-color: #80CBC4;" text="CİNSİYET" />
+            <TableColumn fx:id="ateskolon" prefWidth="79.0" style="-fx-background-color: #4DB6AC;" text="ATEŞ" />
+            <TableColumn fx:id="teshiskolon" prefWidth="78.0" style="-fx-background-color: #80CBC4;" text="TEŞHİS" />
+        </columns>
+      </TableView>
+      <Label layoutX="368.0" prefHeight="94.0" prefWidth="294.0" text="KORONA" textFill="#00968f">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="70.0" prefHeight="66.0" prefWidth="132.0" text="TAKİP" textFill="#4db6ac">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="528.0" layoutY="81.0" text="SİSTEMİ" textFill="#80cbc4">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hastaadfxid" layoutX="23.0" layoutY="137.0" promptText="Hasta Adı">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="sehirfxid" layoutX="23.0" layoutY="174.0" prefHeight="29.0" prefWidth="162.0" promptText="Şehir" />
+      <RadioButton fx:id="erkekradio" layoutX="21.0" layoutY="239.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="57.0" text="Erkek">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="cinsiyetradio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="kadinradio" layoutX="21.0" layoutY="264.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="57.0" text="Kadın" toggleGroup="$cinsiyetradio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="25.0" layoutY="213.0" text="Cinsiyet " underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="ateslabelfxid" layoutX="23.0" layoutY="288.0" text="Ateş" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Slider fx:id="atesfxid" blockIncrement="5.0" layoutX="25.0" layoutY="318.0" majorTickUnit="5.0" max="43.7" min="21.0" prefHeight="19.0" prefWidth="132.0" showTickLabels="true" value="20.0" />
+      <CheckBox fx:id="pozitifcheck" layoutX="25.0" layoutY="380.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="66.0" text="Pozitif">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="negatifcheck" layoutX="25.0" layoutY="405.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="70.0" text="Negatif">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="25.0" layoutY="350.0" text="Teşhis" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="430.0" text="Meslek" underline="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="ogrenciradio" layoutX="26.0" layoutY="455.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="70.0" text="Öğrenci">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="meslekradio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="memurradio" layoutX="26.0" layoutY="479.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="70.0" text="Memur" toggleGroup="$meslekradio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="emekliradio" layoutX="103.0" layoutY="455.0" mnemonicParsing="false" text="Emekli" toggleGroup="$meslekradio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="isciradio" layoutX="104.0" layoutY="479.0" mnemonicParsing="false" text="İşçi" toggleGroup="$meslekradio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="402.0" layoutY="512.0" mnemonicParsing="false" onAction="#silbut" prefHeight="37.0" prefWidth="98.0" text="SİL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="290.0" layoutY="512.0" mnemonicParsing="false" onAction="#eklebut" prefHeight="37.0" prefWidth="98.0" text="EKLE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="515.0" layoutY="512.0" mnemonicParsing="false" onAction="#guncellebut" prefHeight="37.0" prefWidth="98.0" text="GÜNCELLE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="627.0" layoutY="512.0" mnemonicParsing="false" onAction="#sorgulabut" prefHeight="37.0" prefWidth="106.0" text="SORGULA">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="sonuc" layoutX="60.0" layoutY="289.0" text="Sonuc">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
